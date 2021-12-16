@@ -1,0 +1,108 @@
+.frame {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 400px;
+    height: 400px;
+    margin-top: -200px;
+    margin-left: -200px;
+    border-radius: 2px;
+      box-shadow: 4px 8px 16px 0 rgba(0,0,0,0.1);
+      overflow: hidden;
+    background: #fff;
+    background-color: rgb(241, 104, 80);
+    color: #333;
+      font-family: 'Open Sans', Helvetica, sans-serif;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+  }
+  
+  .center {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    
+  }
+  .circle {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+
+    border-radius: 50%;
+    background-color: antiquewhite;
+    box-shadow: 5px 5px 15px #00000044;
+  }
+  #grande {
+    z-index: 0;
+    width: 120px;
+    height: 120px;
+    animation: grande-Ani 5s ease-in-out infinite;
+  }
+  #mediano {
+    z-index: 1;
+    width: 90px;
+    height: 90px;
+    animation: mediano-Ani 5s ease-in-out infinite;
+  }
+  #peque {
+    z-index: 2;
+    width: 60px;
+    height: 60px;
+    animation: peque-Ani 5s ease-in-out infinite;
+  }
+  
+  @keyframes grande-Ani {
+    0% {
+        width: 0px;
+        height: 0px;
+    }
+    48%,
+    52% {
+        width: 120px;
+        height: 120px;
+    }
+    100% {
+        width: 0px;
+        height: 0px;
+    }
+  }
+  @keyframes mediano-Ani {
+    0%,
+    15% {
+        /* Empieza en el 15% hasta el 48% */
+        width: 0px;
+        height: 0px;
+    }
+    48%,
+    52% {
+        /* más rápido que el grande, entre el 52 y el 85 % de la animación */
+        width: 90px;
+        height: 90px;
+    }
+    85%,
+    100% {
+        width: 0px;
+        height: 0px;
+    }
+  }
+  @keyframes peque-Ani {
+    0%,
+    30% {
+        width: 0px;
+        height: 0px;
+    }
+    48%,
+    52% {
+        /* Aun más cortita que la mediana */
+        width: 60px;
+        height: 60px;
+    }
+    70%,
+    100% {
+        width: 0px;
+        height: 0px;
+    }
+  }
+  

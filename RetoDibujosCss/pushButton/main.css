@@ -1,0 +1,39 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+div{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+.container{
+    background-color: #6592CF;
+    width: 400px;
+    height: 300px;
+}
+.rec{
+    background-color: #243D83;
+    width: 350px;
+    height: 200px;
+}
+.circle{
+    border-radius: 50%;
+}
+#grande{
+    background-color: #6592CF;
+    width: 250px;
+    height: 250px;
+}
+#mediano{
+    background-color: #243D83;
+    width: 150px;
+    height: 150px;
+}
+#peque{
+    background-color: #EEB850;
+    width: 50px;
+    height: 50px;
+}
+

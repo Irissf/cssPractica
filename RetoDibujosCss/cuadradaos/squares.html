@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="container">
+        <div class="square" id="uno"></div>
+        <div class="square" id="dos"></div>
+        <div class="square" id="tres"></div>
+        <div class="square" id="cuatro"></div>
+    </div>
+<style>
+
+    body{
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%,-50%);
+    }
+    .container{
+        width: 25em;
+        height: 20em;
+        background-color:#62374e ;
+    }
+    .square {
+        width: 3em;
+        height: 3em;
+        background: #fdc57b;
+    }
+
+    /* mismo ancho */
+    #uno,#dos{
+        position: absolute;
+        top: 10%;
+    }
+    #tres,#cuatro{
+        position: absolute;
+        top: 73%;
+    }
+    #uno,#tres{
+        position: absolute;
+        left: 10%;
+    }
+    #dos,#cuatro{
+        position: absolute;
+        left: 78%;
+    }
+
+</style>
+</body>
+</html>

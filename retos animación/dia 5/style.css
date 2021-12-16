@@ -1,0 +1,74 @@
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:700,300);
+*{
+    margin: 0;
+    padding: 0;
+}
+.frame {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 400px;
+  height: 400px;
+  margin-top: -200px;
+  margin-left: -200px;
+  border-radius: 2px;
+	box-shadow: 4px 8px 16px 0 rgba(0,0,0,0.1);
+	overflow: hidden;
+  background-color: #87AAAA;
+  color: #333;
+	font-family: 'Open Sans', Helvetica, sans-serif;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+.center {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+}
+
+.container{
+    position: relative;
+    width: 300px;
+    height: 200px;
+    box-shadow:3px 3px 3px #435d5d;
+}
+.cabecera{
+    width: 300px;
+    height: 30%;
+    background-color: #F6D7A7;
+}
+h3{
+    color: #435d5d;
+    font-size: 1em;
+    position: absolute;
+    left: 10px;
+    top: 15px;
+}
+#fecha{
+    position: absolute;
+    left: 5px;
+    top: 20px;
+    font-size: 0.6em;
+}
+p{
+    color: #435d5d;
+    font-size: 1em;
+    position: absolute;
+    right: 10px;
+    top: 15px;
+}
+#precio{
+    position: absolute;
+    right: 5px;
+    top: 20px;
+    font-size: 0.6em;
+}
+.cuerpo{
+    width: 300px;
+    height: 70%;
+    background-color: #C8E3D4;
+}
+
+

@@ -1,0 +1,59 @@
+/* //borra la siguiente línea si no se usa texto
+// edita la línea si quieres usar otras fuentes */
+@import url('https://fonts.googleapis.com/css2?family=Mukta:wght@300&family=Open+Sans:wght@800&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+}
+/* //use solo el espacio disponible dentro del marco de 400x400*/
+.frame {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 400px;
+  height: 400px;
+  margin-top: -200px;
+  margin-left: -200px;
+  border-radius: 2px;
+	box-shadow: 4px 8px 16px 0 rgba(0,0,0,0.1);
+	overflow: hidden;
+  background: #fff;
+  background: radial-gradient(circle, rgba(238,174,202,1) 0%, rgba(148,187,233,1) 100%);
+  color: #333;
+	font-family: 'Open Sans', Helvetica, sans-serif;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+    
+}
+
+.center {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    line-height:0.80;
+    color: #05386b;
+    
+}
+
+.number{
+    font-family: 'Mukta', sans-serif;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 8em;
+    letter-spacing: -12px;
+    text-shadow: 2px 2px #919294;
+
+}
+.dias{
+    font-size: 3em;
+    margin-left: 10px;
+    letter-spacing: -5px;
+    text-align: center;
+}
+.def{
+    margin-left: 10px;
+    text-align: center;
+}
+
+

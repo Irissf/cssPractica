@@ -1,0 +1,57 @@
+.container{
+    position: absolute;
+    overflow: hidden;
+    width: 400px;
+    height: 300px;
+    background-color: #222730;
+
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+.dibujo{
+    position: relative;
+}
+
+.rectangulo{
+    width: 500px;
+    height: 150px;
+    background-color: #4CAAB3;
+
+    position: absolute;
+    top: 75px;
+}
+
+#rombo-uno{
+    width: 250px;
+    height: 250px;
+    background:  #222730;
+
+    position: absolute;
+    transform: rotate(45deg);
+    left: 75px;
+    top: 30px;
+}
+
+#rombo-dos{
+    width: 150px;
+    height: 150px;
+    background: #4CAAB3;
+
+    position: absolute;
+    transform: rotate(180deg);
+    left: 50px;
+    top: 52px;
+}
+
+.circulo{
+    width: 50px;
+    height: 50px;
+    background-color: #393E46;
+    border-radius: 50%;
+
+    position: absolute;
+    top: 150px;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}

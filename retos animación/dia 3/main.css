@@ -1,0 +1,146 @@
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:700,300);
+
+.frame {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 400px;
+  height: 400px;
+  margin-top: -200px;
+  margin-left: -200px;
+  border-radius: 2px;
+	box-shadow: 4px 8px 16px 0 rgba(0,0,0,0.1);
+	overflow: hidden;
+  background: #333;
+  color: #333;
+	font-family: 'Open Sans', Helvetica, sans-serif;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+.center {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+}
+
+.circle{
+    overflow: hidden;
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    background-color: rgb(155, 224, 224);
+    animation: colorFondo;
+    animation-duration: 5s;
+}
+.escenario{
+    position: relative;
+}
+
+.suelo{
+    /* Con overflow:hidden en el padre para que no desborden
+    los hijos, no se puede poner postion:absolute */
+    position: absolute;
+    top: 125px;
+    background-color: rgb(231, 212, 105);
+    height: 100px;
+    width: 100%; 
+    animation: colorSuelo;
+    animation-duration: 5s;
+}
+
+.piramide-izq{
+    width: 60px;
+    height: 60px;
+    position: absolute;
+    top: 65px;
+    left: 100px;
+    background-color: rgb(63, 60, 43);
+    animation:colorPiramideIzq;
+    animation-duration: 5s;
+    -webkit-clip-path: polygon(0 0, 20% 100%, 100% 100%);
+    clip-path: polygon(0 0, 20% 100%, 100% 100%);
+}
+.piramide-dcha{
+    width: 60px;
+    height: 60px;
+    position: absolute;
+    top: 65px;
+    left: 52px;
+    background-color: rgb(160, 147, 73);
+    animation: colorPiramideDcha;
+    animation-duration: 5s;
+    -webkit-clip-path: polygon(80% 0, 0 100%, 100% 100%);
+    clip-path: polygon(80% 0, 0 100%, 100% 100%);
+}
+
+.sol{
+    width: 30px;
+    height: 30px;
+    position: absolute;
+    left: -30px;
+    top: 100px;
+    border-radius: 50%;
+    background-color: yellow;
+    animation: sol;
+    animation-duration: 5s;
+    
+}
+
+.sombra{
+    width: 100px;
+    height: 100px;
+    position: absolute;
+    left: 60px;
+    animation: sombra;
+    animation-duration: 5s;
+    background-color: rgb(112, 108, 83);
+    -webkit-clip-path: polygon(100% 0, 0 0, 100% 20%);
+    clip-path:polygon(100% 0, 0 0, 100% 20%);
+
+}
+
+@keyframes sol{
+    50%{
+        transform:translate(115px,-80px);
+    }100%{
+        transform:translate(250px,0px);
+    }
+}
+
+@keyframes colorPiramideDcha{
+    100%{
+        background-color: rgb(63, 60, 43);
+    }
+}
+
+@keyframes colorPiramideIzq{
+    100%{
+        background-color: rgb(160, 147, 73);
+    }
+}
+
+@keyframes sombra{
+    50%{
+        -webkit-clip-path:  polygon(100% 0, 0 0, 49% 24%);
+        clip-path:  polygon(100% 0, 0 0, 49% 24%);
+    }100%{
+        -webkit-clip-path:  polygon(100% 0, 0 0, 0 23%);
+        clip-path:  polygon(100% 0, 0 0, 0 23%);
+        background-color: rgb(44, 44, 44);
+    }
+}
+
+@keyframes colorFondo{
+    100%{
+        background-color:rgb(66, 48, 73);
+    }
+}
+@keyframes colorSuelo{
+    100%{
+        background-color: rgb(141, 131, 72);
+    }
+}
+
+

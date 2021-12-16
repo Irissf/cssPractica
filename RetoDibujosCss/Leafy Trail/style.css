@@ -1,0 +1,24 @@
+.container{
+    width: 400px;
+    height: 300px;
+    background-color:#0B2429;
+
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+
+.hoja{
+    width: 150px;
+    height: 150px;
+    border-radius: 75% 0 75% 0;
+    background-color: #F3AC3C;
+
+    position: absolute;
+    top: 25%;
+    left: 45%;
+
+    box-shadow: -50px 0 #998235,
+    -100px 0 #1A4341;
+}
