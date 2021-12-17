@@ -6,7 +6,7 @@
 
 body{
     margin: 0;
-    background-color: var(--color-secondary);
+    height: 100vh;
 }
 
 .cabecera{
@@ -20,7 +20,7 @@ body{
     
     /* box-model */
     width: 100%;
-    height: 30rem;
+    height:70%;
     /* text */
     
     /*visuales*/
@@ -45,6 +45,32 @@ body{
 .ingles{
     letter-spacing: 0.3rem;
     font-size: 2rem;
+}
+
+
+/* CUERPO */
+.main{
+
+    background-color: var(--color-secondary);
+    height: 30%;
+}
+
+.imagen{
+    position: absolute;
+    left: 50%;
+    right: 50%;
+    transform: translate(-50%, -30%);
+
+    overflow: hidden;
+    border: var(--color-primary) 7px solid;
+
+    background-color: var(--color-secondary);
+    width: 30rem;
+    height: 15rem;
+}
+
+.imagen-img{
+    transform: translateX(-100px);
 }
 
 :root{
