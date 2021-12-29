@@ -10,13 +10,16 @@
 body{
     margin: 0;
     background-color: var(--color-primario);
-
+    font-family: "Times New Roman";
+    
 }
 
 .container {  
     height: 100vh;
-    width: 100vw;
-    
+    width: 90vw;
+    margin-left:auto;
+    margin-right: auto;
+
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
     grid-template-rows: 1fr 0.5fr 2fr 2fr 0.5fr;
@@ -27,62 +30,89 @@ body{
       "habilidades datos experiencia otros"
       "habilidades foto formacion otros"
       "habilidades redes redes redes";
-  }
+}
   
-  .zona{
-    border:2px solid var(--color-contraste);
-  }
+.zona{
+    border:1px solid wheat;
+}
+.subtitulo{
+    font-size: 2.5em;
+    margin-left: 0.5em;
+    margin-bottom: 0;
+    text-transform: uppercase;
+}
 
-  .titulo { grid-area: titulo; }
-  
-  .botones { grid-area: botones; }
-  
-  .habilidades { grid-area: habilidades; }
-  
-  .redes { grid-area: redes; }
-  
-  .otros { grid-area: otros; }
-  
-  .datos { grid-area: datos; }
-  
-  .foto { grid-area: foto; }
-  
-  .formacion { grid-area: formacion; }
-  
-  .experiencia { grid-area: experiencia; }
-  
-/* 
-header{
+
+
+/*#region Zona del título */
+.titulo { 
+    grid-area: titulo; 
+    display: flex;
+    flex-direction: column;
+    border-bottom:2px solid var(--color-contraste);
+}
+.textos{
     display: flex;
     align-items: center;
-    justify-content: space-around;
-    border-bottom: 2px solid var(--color-contraste);
+    justify-content: center;
 }
-
-.titulo{
+.cv{
     background-color: var(--color-contraste);
     color: var(--color-primario);
-    display: inline;
-    padding: 0.5em;
-    font-size: 1.2em;
-    border-radius: 0.2em;
+    padding: 0.2em 2em;
+    border-radius: 0.3em;
+    margin-right: 3em;
+}
+.nombre{
+    margin: 0;
+    font-size: 3.5em;
+    text-transform: uppercase;
+}
+.linea{
+    position: relative;
+    top: 1.5em;
+    background-color: var(--color-contraste);
+    width: 100%;
+    height: 0.7em;
+}
+/* #endregion */
+
+.botones { grid-area: botones; }
+
+.habilidades { grid-area: habilidades; }
+
+.redes { grid-area: redes; }
+
+.otros { grid-area: otros; }
+
+.datos { 
+    grid-area: datos; 
+    border-right: 2px solid var(--color-contraste);
 }
 
-.colors{
+
+/*#region Zona de foto */
+.foto {
+    
     display: flex;
-    gap: 1em;
+    background-color: var(--color-contraste);
+    grid-area: foto; 
+    align-items: center;
+    justify-content: center;
+}
+.foto-imagen{
+    background-color: var(--color-contraste);
+    overflow: hidden; 
+    width: 80%;
+    height: 80%;
 }
 
-.enlaces>ul>li{
-    display: inline;
+.foto-imagen>img{
+    width: 100%;
 }
-.enlaces>ul>li>a{
-    font-size: 1.2em;
-    text-decoration: none;
-    margin-left: 1em;
-    color: var(--color-contraste);
-}
-.enlaces>ul>li>a:hover{
-    font-size: 1.5em;
-    border-bottom: 2px solid var(--color-contraste);
-} */
+/* #endregion */
+
+.formacion { grid-area: formacion; }
+
+.experiencia { grid-area: experiencia; }
+  
