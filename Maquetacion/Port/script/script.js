@@ -1,4 +1,4 @@
-//Modo oscuro
+//Modo oscuro ************************************************************
 const toggleTheme = document.getElementById('toggle-theme');
 const toggleIcon = document.getElementById('toggle-icon');
 const toggleText = document.getElementById('toggle-text');
@@ -24,4 +24,18 @@ toggleTheme.addEventListener('click',()=>{
         toggleIcon.src = './resources/icons/moon.svg';
         toggleText.textContent = 'Modo Oscuro';
     }
+})
+
+
+//Para la selección de los colores **************************************
+const toggleColors = document.getElementById("toggle-colors")
+
+//accedemos a las variables del css
+const rootStyles = document.documentElement.style;
+
+toggleColors.addEventListener('click', (e)=>{
+    // console.log(e.target.dataset);
+
+    //e.target.dataset.color ya que así llamamos al data en el html
+    rootStyles.setProperty('--primary-color',e.target.dataset.color)
 })
