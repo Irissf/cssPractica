@@ -9,6 +9,9 @@
 
     /* para la transición de cambios de colores y modo */
     --transition: color 0.1s, background-color 0.25s ease-in-out;
+
+    /* Para controlar el tamaño de las barras de las skills */
+    --skills-bar-length: 0%;
 }
 
 *{
@@ -112,12 +115,14 @@ el cual vemos que tiene de Background color el --primary-color */
 
 /* #endregion */
 
-/* ============================MAIN================================ */
+/* #region MAIN */
 
 .main{
     display: grid;
     padding: 2em;
 }
+
+
 @media screen and (min-width: 720px){
     .main{
         /* La columna de la izq, el mínicmo tamaño para que entre el contenido, y la segunda
@@ -125,6 +130,19 @@ el cual vemos que tiene de Background color el --primary-color */
         grid-template-columns: min-content 1fr;
     }
 }
+
+/* Estilos comunes del column */
+.column{
+    display: grid;
+    gap: 0.5em;
+}
+@media screen and (min-width: 720px){
+    .column--right{
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: repeat(3, min-content);
+    }
+}
+
 .card{
     padding: 1em;
     background-color: var(--bg-card-color);
@@ -160,6 +178,59 @@ el cual vemos que tiene de Background color el --primary-color */
     font-size: 0.9rem;
     line-height: 1.6;
 }
+
+.skills{
+    padding: 1em 0;
+}
+.skills__item{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.skills__bar,.skills__bar::after{
+    /* La barra de progreso, necesitamos ponerla en relative, para que 
+    el progreso se ponga con referencia a este */
+    position: relative;
+
+    width: 175px;
+    height: 8px;
+    background-color: #888;
+    border-radius: var(--border-radius);
+    overflow: hidden;
+}
+.skills__bar::after{
+    /* el progreso, content, necesario para que se dibuje */
+    content: "";
+    position: absolute;
+    left: -175px;
+    background-color: var(--primary-color);
+    transition: var(--transition);
+    animation: skills-bar-fill 2s ease-in-out forwards;
+
+}
+/* Hacemos esto, por cada una de las skills.con sus % correspondientes */
+.skills__bar--70::after{
+    /* Lo que hacemos con esto es que, la barra que teniamos al principio del progress bar, la trasladamos
+    hacia la derecha un tanto por ciento, y el resto de la barra, la ocultamos con un hidden en el overflow */
+    --skills-bar-length: 70%;
+}
+.skills__bar--50::after{
+    --skills-bar-length: 50%;
+}
+.skills__bar--60::after{
+    --skills-bar-length: 60%;
+}
+
+
 .icon{
     margin-right: 1em;
 }
+
+@keyframes skills-bar-fill{
+    to{
+        transform: translateX(var(--skills-bar-length));
+    }
+}
+/* #endregion */
+
+/* otros */
