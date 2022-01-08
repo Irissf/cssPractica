@@ -120,6 +120,7 @@ el cual vemos que tiene de Background color el --primary-color */
 .main{
     display: grid;
     padding: 2em;
+    gap:0.5em;
 }
 
 
@@ -138,8 +139,8 @@ el cual vemos que tiene de Background color el --primary-color */
 }
 @media screen and (min-width: 720px){
     .column--right{
-        grid-template-columns: 1fr 1fr 1fr;
-        grid-template-rows: repeat(3, min-content);
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(3, min-content) 1fr;
     }
 }
 
@@ -179,13 +180,26 @@ el cual vemos que tiene de Background color el --primary-color */
     line-height: 1.6;
 }
 
+/* #region SKILLS */
 .skills{
     padding: 1em 0;
+}
+.skills__header{
+    display: flex;
+    justify-content: space-between;
+    width: 175px;
+    margin-left: auto;
+}
+.skills__tech{
+    /* Le quitamos el margen por defecto a los párrafos */
+    margin: 0;
+    font-size: 0.8rem;
 }
 .skills__item{
     display: flex;
     align-items: center;
     justify-content: space-between;
+    margin-bottom: 0.5em;
 }
 .skills__bar,.skills__bar::after{
     /* La barra de progreso, necesitamos ponerla en relative, para que 
@@ -197,6 +211,7 @@ el cual vemos que tiene de Background color el --primary-color */
     background-color: #888;
     border-radius: var(--border-radius);
     overflow: hidden;
+    margin-left: 2em;
 }
 .skills__bar::after{
     /* el progreso, content, necesario para que se dibuje */
@@ -221,7 +236,6 @@ el cual vemos que tiene de Background color el --primary-color */
     --skills-bar-length: 60%;
 }
 
-
 .icon{
     margin-right: 1em;
 }
@@ -231,6 +245,8 @@ el cual vemos que tiene de Background color el --primary-color */
         transform: translateX(var(--skills-bar-length));
     }
 }
+/* #endregion */
+
 /* #endregion */
 
 /* otros */
