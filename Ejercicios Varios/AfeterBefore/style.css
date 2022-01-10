@@ -1,0 +1,63 @@
+/* Pseudoelementos en css => Como definició de pseudo tenemos algoq ue se hace pasar por
+per no es, pseudoelemento, seria algoq ue se hace pasar por elemento pero que no lo es */
+
+body{
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+    background: #333;
+}
+h1{
+    text-align: center;
+    color: #aaa;
+}
+h2{
+    color: #eee;
+    font-size: 4em;
+    text-align: center;
+}
+
+/* Dependen del padre, en este caso h2 */
+/* h2::before{
+    content: "$ ";
+}
+h2::after{
+    content: ".00";
+} */
+
+
+h2::before{
+/* me indica lo que va antes */
+    content: "";
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    background-color: #aaa;
+}
+h2::after{
+/* me indica lo que va después */
+    content: "";
+}
+
+.esfera{
+    position: relative;
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    background-color: #aaa;
+    margin: auto;
+}
+.esfera::after{
+    content: "";
+    display: block;
+    width: 150px;
+    height: 5px;
+    background-color: #eee;
+
+    position: absolute;
+    bottom:0;
+    left: 50%;
+    border-radius: 50%;
+    /* Para poner al hijo por detrás, siempre que el padre no tenga un z-index */
+    z-index: -1; 
+}
