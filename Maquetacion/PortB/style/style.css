@@ -1,0 +1,120 @@
+:root{
+    --color-primary:#333;
+    --color-secundary:wheat;
+
+    --font-size:1.2rem;
+}
+
+
+*{
+    box-sizing: border-box;
+}
+
+body{
+    margin: 0;
+    background-color: var(--color-primary);
+    color:var(--color-secundary);
+
+    font-size: var(--font-size);
+}
+.container > *{
+    border: 1px solid var(--color-secundary);
+    padding: 20px;
+}
+
+/*#region Tamaño pantallas */
+
+/* Para móvil */
+.container{
+    display: grid;
+    gap: 10px;
+    min-height: 100vh;
+
+    grid-template-rows: auto 1fr;
+    grid-template-areas: 
+    "header"
+    "main"
+    "asideL"
+    "asideR"
+    "footer";
+}
+
+/* Para tablet, Cuando el ancho mínimo es de 500 px*/
+@media (min-width: 1000px){
+    .container{
+        grid-template-columns: auto 1fr;
+        grid-template-rows: auto 1fr;
+        /* le ponemos 2 columnas */
+        grid-template-areas: 
+            "header header"
+            "main asideL"
+            "main asideR"
+            "footer footer";
+    }
+}
+
+/* Para pc */
+@media (min-width :1500px){
+    .container{
+        grid-template-columns: auto 1fr;
+        grid-template-rows: auto 1fr;
+        grid-template-areas: 
+            "header header header"
+            "asideL main asideR"
+            "asideL main asideR"
+            "asideL footer footer";
+    }
+}
+/* #endregion */
+
+/* partes del grid */
+
+/* #region CABECERA */
+.header{
+    grid-area: header;
+}
+.header__title{
+    margin: 0;
+}
+.navbar{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.button{
+    text-decoration: none;
+    color: var(--color-secundary);
+}
+.colores{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: .2em;
+}
+.colores__item{
+    height: 20px;
+    width: 20px;
+    background-color: var(--color-secundary);
+}
+/* #endregion */
+
+/* #region MAIN */
+.main{
+    grid-area: main;
+}
+/* #endregion */
+
+/* #region LATERALES */
+.aside--left{
+    grid-area: asideL;
+}
+.aside--right{
+    grid-area: asideR;
+}
+/* #endregion */
+
+/* #region FOOTER */
+.footer{
+    grid-area: footer;
+}
+/* #endregion */
