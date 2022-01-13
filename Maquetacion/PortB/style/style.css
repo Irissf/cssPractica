@@ -74,12 +74,16 @@ body{
     grid-area: header;
 }
 .header__title{
-    margin: 0;
+    margin:0;
+    text-align: center;
+    padding-bottom: 10px;
+    border-bottom:1px solid var(--color-secundary) ;
 }
 .navbar{
     display: flex;
     align-items: center;
     justify-content: space-between;
+    margin-top: 1em;
 }
 .button{
     text-decoration: none;
