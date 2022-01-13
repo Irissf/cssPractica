@@ -1,0 +1,73 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat+Alternates:wght@200&family=Pacifico&display=swap');
+
+:root{
+    --color-primary:#e3e4e0;
+    --color-secondary:#7f867b;
+}
+
+body{
+    margin: 0;
+    background-color: var(--primary-color);
+}
+.header{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 50px 0;
+}
+.header__imagen{
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+
+    /* Para recortar la imagen */
+    object-fit: cover;
+}
+.header__title{
+    font-size: 3em;
+    margin: 0;
+    /* font-family: 'Roboto', sans-serif; */
+    font-family: 'Pacifico', cursive;
+    color: var(--color-secondary);
+}
+.header__text{
+    width: 80%;
+    /* Poner el texto alineado perfectamente */
+    text-align: justify;
+    font-size: 1.2em;
+    color: var(--color-secondary);
+}
+main{
+
+    /* display: grid; */
+
+    /* Auto-fill ajustará el num de columnas cuando tenga ese ancho para
+    darles. */
+    /* 
+    grid-template-columns: repeat(auto-fill,minmax(320px,1fr));
+    gap: 10px;
+    justify-content: center;  */
+    
+    /* Hasta aqui resolvimos las columnas, pero podemos ver que la imagen más alta
+    determina el alto de la fila, y la siguiente no empieza hasta la siguiente
+    fila, dejando huevos grandes en medio*/
+
+    /* Una solución sería usar la propiedad column*/
+    padding: 0 10px;
+    columns: 5 220px;
+    column-gap: 0.5em;
+}
+.imagen{
+    width: 100%;
+    /* Para ajustar la separación y que sea igual a la de la columna */
+    margin-bottom: 0.5em;
+
+    /* Si queremos poner borde a las imágenes, mejor usar outline, para no
+    romper el diseño */
+    border-radius: 20px;
+}
+.imagen:hover{
+    /* hay filtros :o */
+    filter: brightness(60%);
+}
