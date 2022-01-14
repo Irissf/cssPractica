@@ -27,7 +27,6 @@ body{
 /* Para móvil */
 .container{
     display: grid;
-    gap: 10px;
     min-height: 100vh;
 
     grid-template-rows: auto 1fr;
@@ -38,6 +37,12 @@ body{
     "asideR"
     "footer";
 }
+.main{
+    grid-area: main;
+    display: flex;
+    flex-direction: column;
+}
+
 
 /* Para tablet, Cuando el ancho mínimo es de 500 px*/
 @media (min-width: 1000px){
@@ -51,6 +56,13 @@ body{
             "main asideR"
             "footer footer";
     }
+    .main{
+        grid-area: main;
+    
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+        grid-template-rows: repeat(4,auto);
+    }
 }
 
 /* Para pc */
@@ -63,6 +75,13 @@ body{
             "asideL main asideR"
             "asideL main asideR"
             "asideL footer footer";
+    }
+    .main{
+        grid-area: main;
+    
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+        grid-template-rows: repeat(2,1fr);
     }
 }
 /* #endregion */
@@ -103,8 +122,19 @@ body{
 /* #endregion */
 
 /* #region MAIN */
-.main{
-    grid-area: main;
+
+.main__imagen--img{
+    width: 50%;
+    min-width: 500px;
+    border-radius: 20px;
+    filter: sepia(10%);
+}
+.main__title{
+    font-size: 2rem;
+    border-bottom:1px solid var(--color-secundary) ;
+}
+.main__text{
+    text-align: justify;
 }
 
 /* #endregion */
@@ -112,6 +142,12 @@ body{
 /* #region LATERALES */
 .aside--left{
     grid-area: asideL;
+}
+.prueba{
+    width: 300px;
+    height: 4px;
+    background-color: var(--color-secundary);
+    border-radius: 2px;
 }
 .aside--right{
     grid-area: asideR;
