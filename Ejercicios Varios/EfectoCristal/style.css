@@ -1,0 +1,27 @@
+/* https://www.youtube.com/watch?v=ALw4DlaBhqI */
+body{
+    background-image: url("https://cdn.dribbble.com/users/3228050/screenshots/8001113/sailorcity_4x.jpg");
+}
+
+.glass{
+    position: relative;
+    width: 400px;
+    height: 600px;
+    margin-left: auto; 
+    margin-right: auto; 
+    margin-top: 160px;
+    border-radius: 20px;
+
+    /* Ponemos transparente el fondo */
+    background-color: rgba(255, 255, 255, 0.20);
+
+    /* Una liger sombrita */
+    box-shadow: 0 8px 32px 0 rgba(31,38,135,0.10);
+
+    /* Difuminamos el fondo */
+    backdrop-filter: blur(4px);
+
+    /* Un bordecito */
+    border: 1px solid white;
+
+}
