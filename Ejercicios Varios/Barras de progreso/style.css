@@ -1,0 +1,58 @@
+:root{
+    --size-progress:0%;
+    --color-barra:#27301f;
+    --color-fondo:#414833;
+    --color-progreso:#a4ac86;
+}
+body{
+    background-color: var(--color-progreso);
+}
+.contenedor{
+    height: 500px;
+    width: 400px;
+    background-color: var(--color-fondo);
+
+    margin-left: auto;
+    margin-right: auto;
+
+    display: flex;
+    flex-direction: column;
+    gap: 2em;
+
+    justify-content: center;
+    align-items: center;
+}
+
+
+.barra-progreso{
+    width: 300px;
+    height: 10px;
+
+    background-color: var(--color-barra);
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.progreso{
+    width: var(--size-progress);
+    height: 100%;
+    background-color: var(--color-progreso);
+    border-radius: 10px;
+}
+
+/* Tamaños de los siderbar */
+.uno{
+    --size-progress:20%;
+}
+.dos{
+    --size-progress:40%;
+}
+.tres{
+    --size-progress:60%;
+}
+.cuatro{
+    --size-progress:80%;
+}
+.cinco{
+    --size-progress:100%;
+}
