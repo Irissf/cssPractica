@@ -1,0 +1,39 @@
+*{
+    box-sizing: border-box;
+}
+
+body{
+    margin: 0;
+    background-color: #aaaad3;
+    background-image:  linear-gradient(#f0dbf0 1px, transparent 1px), linear-gradient(to right, #f0dbf0 1px, #aaaad3 1px);
+    background-size: 20px 20px;
+}
+
+.container{
+    background-color: #F0DBF0;
+    opacity: 90%;
+    width: max-content;
+    padding: 40px;
+    border-radius: 10px;
+    margin: 100px auto;
+}
+li{
+    display: flex;
+    align-items: center;
+
+    gap: 20px;
+}
+.btn--delete{
+    border: none;
+    padding: 4px;
+    text-align: center;
+    color: #aaaad3;
+    width: 20px;
+    height: 20px;
+}
+.title{
+    color: #aaaad3;
+}
+.empty{
+    color: #aaaad3;
+}
