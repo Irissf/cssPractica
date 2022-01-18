@@ -17,23 +17,49 @@ body{
     border-radius: 10px;
     margin: 100px auto;
 }
+ul{
+    /* Para quitar el espacio del punto de la lista */
+    padding-left:0;
+}
 li{
     display: flex;
     align-items: center;
-
-    gap: 20px;
+    justify-content: space-between;
+    margin-bottom: 10px;
 }
+li>p,li>button{
+    margin: 0;
+    color: #aaaad3;
+}
+.btn--delete,.btn{
+    
+    width: 20px;
+    height: 20px;
+    border-radius: 3px;
+}
+
 .btn--delete{
     border: none;
     padding: 4px;
     text-align: center;
-    color: #aaaad3;
-    width: 20px;
-    height: 20px;
+
+    background-color: aliceblue;
 }
+li:hover{
+    border-bottom: #aaaad3 solid 2px;
+}
+
 .title{
     color: #aaaad3;
 }
 .empty{
     color: #aaaad3;
+}
+.input{
+    border: none;
+    height: 25px;
+}
+.btn{
+    border: none;
+    background-color: #aaaad3;
 }
