@@ -1,0 +1,63 @@
+*{
+    box-sizing: border-box;
+}
+.container{
+    display: flex;
+    width: 100%;
+    height: 100vh;
+    padding: 4% 2%;
+}
+
+.card{
+    /* flex 1 para que mantenga el espaciado */
+    flex: 1;
+    overflow: hidden;
+    border-radius: 10px;
+
+    margin: 8px;
+    box-shadow: 0 20px 30px rgba(0, 0, 0, 0.20);
+
+    transition: all 600ms;
+}
+
+.card > img{
+    width: 200%;
+    height: calc(100% - 5vh);
+    /* Para que se adapten las imágenes y que no queden estiradas y deformadas */
+    object-fit: cover;
+    transition: all 300ms;
+}
+
+.card > span{
+    font-size: 1.5rem;
+    font-family: sans-serif;
+    display: block;
+    text-align: center;
+
+    /* lo que luego le quitamos en el alto de la imagen */
+    height: 5vh;
+}
+
+.card:hover{
+    flex: 50%;
+}
+
+.card:hover > img{
+    width: 100%;
+    height: 100%;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
