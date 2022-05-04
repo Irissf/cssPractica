@@ -1,0 +1,47 @@
+:root{
+    --white:#fff;
+    --bg:#e5e5e5;
+    --pink:#fca311;
+    --blue-dark:#14213d;
+}
+
+body{
+    align-items: center;
+    background-color: var(--bg);
+    color: var(--white);
+    display: flex;
+    font-size: 10px;
+    height: calc(100vh - 100px);
+    justify-content: center;
+    
+}
+
+.underline{
+    color: var(--blue-dark);
+    font-size: 3rem;
+
+    /* Para que la linea esté solo hasta donde llega el texto */
+    display: inline-block; 
+    position: relative;
+}
+
+/* Dibujamos la linea con el after de .underline */
+.underline:after{
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 4px;
+    bottom: 0;
+    left: 0;
+    background-color: var(--pink);
+
+    /* efecto */
+    transform: scaleX(0);
+    transform-origin: bottom right;
+    transition: transform 0.6s ease-out;
+}
+
+.underline:hover:after{
+    transform: scaleX(1);
+    transform-origin: bottom left;
+}
