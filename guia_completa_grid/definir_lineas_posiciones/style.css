@@ -1,0 +1,36 @@
+:root{
+    --color-light:#D5CFBE;
+    --color-middle:#DEC48B;
+    --color-dark:#B2B09C;
+}
+
+*{
+    box-sizing: border-box;
+}
+body{
+    margin: 0;
+    background-color: var(--color-light);
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.container{
+    background-color:var(--color-dark);
+    border-radius: 5px;
+    padding: 15px;
+    
+    width: 600px;
+    height: 500px;
+
+    /* GRID */
+    display:grid;
+    gap: 8px;
+    /* Podemos poner nosotros nombre a las lienas de filas y columnas */
+    grid-template-columns: [linea1] 1fr [col-2] 100px [linea3-inicio] 1fr [col-final];
+    grid-template-rows: [fila-1] 1fr [middle] 1fr [row-end];
+
+}
+.item{
+    background-color: var(--color-middle);
+    border-radius: 5px;
+    text-align: center;
+}
