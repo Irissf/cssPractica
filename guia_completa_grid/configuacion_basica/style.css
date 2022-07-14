@@ -1,0 +1,29 @@
+*{
+    box-sizing: border-box;
+}
+body{
+    margin: 0;
+    background-color: #dbe4ed;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.container{
+    background-color:#436280;
+    border-radius: 5px;
+    padding: 5px;
+    
+    width: 600px;
+    height: 500px;
+
+    /* GRID */
+    display:grid;
+    /* La del medio toma 100px, y de lo que queda de espacio, cada una toma 1fr */
+    grid-template-columns: 1fr 100px 1fr;
+    grid-template-rows: 1fr 1fr;
+
+}
+.item{
+    background-color: #a3bad2;
+    border-radius: 5px;
+    text-align: center;
+}
