@@ -1,0 +1,35 @@
+:root{
+    --color-light:#FFE7BF;
+    --color-middle:#FFC4C4;
+    --color-dark:#FF869E;
+}
+
+*{
+    box-sizing: border-box;
+}
+body{
+    margin: 0;
+    background-color: var(--color-light);
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.container{
+    background-color:var(--color-dark);
+    border-radius: 5px;
+    padding: 15px;
+    
+    width: 600px;
+    height: 500px;
+
+    /* GRID */
+    display:grid;
+    gap: 8px;
+    /* podemos juntar columnas y filas */
+    grid-template: repeat(2,1fr) / repeat(3, 1fr);
+
+}
+.item{
+    background-color: var(--color-middle);
+    border-radius: 5px;
+    text-align: center;
+}
